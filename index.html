@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS Weather App</title>
+    <link rel="stylesheet" href='./weather-icons/css/weather-icons.css'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href='./weather.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <i class="wi-day-cloudy"></i>
+        JS Weather App
+    </header>
+    <div id="input-wrapper">
+        <label for="city-name" id="city-name-label" class="opacity-1">Enter a city name...</label>
+        <input autocomplete="off" id="city-name" type="text" name="cityName">
+        <ul id="city-list">
+        </ul>
+    </div>
+    <div id="weather">
+        <div class="weather-location-wrapper">
+            <div id="location"></div>
+            <div id="description"></div>
+        </div>
+        <div class="weather-data-wrapper">
+            <div id="icon"></div>
+            <div id="temp"></div>
+        </div>
+    </div>
+    <div id="forecast" class="swiper-container">
+        <div class='swiper-wrapper'></div>
+        <div class="swiper-button swiper-button-next hidden"></div>
+        <div class="swiper-button swiper-button-prev hidden"></div>
+        <div class="swiper-scrollbar hidden"></div>
+    </div>
+    <script src="weather-app.js"></script>
+</body>
+
+</html>

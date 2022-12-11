@@ -1,0 +1,264 @@
+html {
+    height: 100%;
+    background: #154c79;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(45deg, #00749b 0%, #009ca6 100%);
+    font-size: 32px;
+    padding: 20px;
+}
+
+.opacity-1 {
+    opacity: 1 !important;
+}
+
+#weather {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: auto;
+    user-select: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#weather>div {
+    flex: 1;
+    text-align: center;
+}
+
+
+#temp {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+header i,
+#icon i,
+.forecast-item i {
+    font-family: 'weathericons';
+    font-style: normal;
+
+}
+
+#icon {
+    font-size: 96px;
+    line-height: 1.5;
+}
+
+.forecast-item i {
+    font-size: 72px;
+}
+
+.forecast-item>div {
+    flex: 1;
+}
+
+.forecast-description {
+    text-align: center;
+}
+
+#location {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.flag {
+    width: 40px;
+    height: auto;
+}
+
+#input-wrapper {
+    width: 75%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#city-name {
+    font-family: inherit;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border-style: none none solid none;
+    border-color: #fff;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+#city-name-label {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#city-name:focus {
+    outline: none;
+}
+
+#city-list {
+    padding: 0;
+    overflow-y: scroll;
+    width: 100%;
+    max-height: 300px;
+    list-style: none;
+    background: #fff;
+    color: #222;
+    font-size: 20px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+#city-list li {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#city-list li:first-of-type {
+    border-top: none;
+}
+
+
+#city-list li:hover {
+    color: dodgerblue;
+}
+
+#city-list li img {
+    margin-right: 10px;
+}
+
+#forecast {
+    display: flex;
+    flex: 1;
+    overflow-x: hidden;
+    max-width: 100%;
+    bottom: 0;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    user-select: none;
+    min-height: 210px;
+    background: linear-gradient(180deg, transparent, #00799c);
+    opacity: 0;
+    transition: opacity 1s ease-in-out 0.5s;
+}
+
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+}
+
+.forecast-temperature {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+
+#city-select {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    border: none;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: scroll;
+    position: absolute;
+    margin: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#city-select li {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.forecast-date-time {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
+}
+
+.swiper-horizontal>.swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    height: 10px !important;
+}
+
+.swiper-scrollbar-drag {
+    background: #fff !important;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #weather {
+        font-size: 20px;
+        padding: 0px;
+        flex-direction: column;
+    }
+
+    #weather>div {
+        flex: 1;
+    }
+
+    #icon,
+    .forecast-item i {
+        font-size: 48px;
+    }
+
+    #temp,
+    .forecast-temperature {
+        font-size: 30px;
+    }
+}
