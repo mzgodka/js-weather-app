@@ -124,8 +124,6 @@ class Forecast {
 
     let timeZoneOffset = forecastList[0].city.timeZone;
 
-    console.log("timeZoneOffset = " + timeZoneOffset);
-
     forecastList.forEach((forecast) => {
       const forecastItem = document.createElement("div");
       forecastItem.classList.add("forecast-item");
