@@ -18,6 +18,14 @@ header {
     background: linear-gradient(45deg, #00749b 0%, #009ca6 100%);
     font-size: 32px;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.github-logo {
+    width: 40px;
+    height: auto;
 }
 
 .opacity-1 {
@@ -238,8 +246,12 @@ header i,
 @media (max-width: 480px) {
     header {
         font-size: 20px;
-        text-align: center;
+        justify-content: center;
         padding: 20px;
+    }
+
+    .logo-container {
+        margin-right: 20px;
     }
 
     #weather {
