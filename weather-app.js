@@ -179,9 +179,8 @@ class Forecast {
 }
 
 const key = "2b26a8bf93ca985460732981188bf01c";
-const language = navigator.language;
+const language = navigator.language.split("-")[0];
 const searchLabel = language == "pl" ? "Szukaj..." : "Search...";
-
 let jsonCitiesStates = [];
 let filteredCities = [];
 let sortedCities = [];
